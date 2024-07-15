@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{75F6742C-3351-476B-A5B6-E1E0B4D77496}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>NLHDH_WinProcess</RootNamespace>
+    <AssemblyName>NLHDH_WinProcess</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.4.5, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.5\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ProcessInfo.cs" />
+    <Compile Include="Algorithm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Algorithm.Designer.cs">
+      <DependentUpon>Algorithm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AlgoView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlgoView.Designer.cs">
+      <DependentUpon>AlgoView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fileReader.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fileReader.Designer.cs">
+      <DependentUpon>fileReader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="storageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="storageForm.Designer.cs">
+      <DependentUpon>storageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaskForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaskForm.Designer.cs">
+      <DependentUpon>TaskForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AboutPcForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutPcForm.Designer.cs">
+      <DependentUpon>AboutPcForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Thread\ClientChat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Thread\ClientChat.Designer.cs">
+      <DependentUpon>ClientChat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Thread\Server.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Thread\Server.Designer.cs">
+      <DependentUpon>Server.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AboutPcForm.resx">
+      <DependentUpon>AboutPcForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Algorithm.resx">
+      <DependentUpon>Algorithm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AlgoView.resx">
+      <DependentUpon>AlgoView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fileReader.resx">
+      <DependentUpon>fileReader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="storageForm.resx">
+      <DependentUpon>storageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaskForm.resx">
+      <DependentUpon>TaskForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Thread\ClientChat.resx">
+      <DependentUpon>ClientChat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Thread\Server.resx">
+      <DependentUpon>Server.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\recycle_bin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\36a7f0723c98f9c6a089.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\this_pc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\task_manager.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ms_word.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\this_pc1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chrome.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calculator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-update-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loading.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notepad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\infomation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\application.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\application1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\windows.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\moon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\restart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shutdown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prev.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addfile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\316222594-3471214863152813-531-5319-3204-1692602206.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\algorithm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\send.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\7-7.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
